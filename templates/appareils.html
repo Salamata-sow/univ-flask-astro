@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Appareils Photo{% endblock %}
+
+{% block content %}
+
+<h2>📷 Appareils Photo</h2>
+
+<h4 class="mt-4">Amateur</h4>
+{% for a in appareils if a.categorie == "Amateur" %}
+<div class="card mb-2">
+  <div class="card-body">
+    <strong>{{ a.marque }} {{ a.modele }}</strong><br>
+    Date : {{ a.date_sortie }}<br>
+    Score : {{ a.score }}/5
+  </div>
+</div>
+{% endfor %}
+
+<h4 class="mt-4">Amateur sérieux</h4>
+{% for a in appareils if a.categorie == "Amateur sérieux" %}
+<div class="card mb-2">
+  <div class="card-body">
+    <strong>{{ a.marque }} {{ a.modele }}</strong><br>
+    Date : {{ a.date_sortie }}<br>
+    Score : {{ a.score }}/5
+  </div>
+</div>
+{% endfor %}
+
+<h4 class="mt-4">Professionnel</h4>
+{% for a in appareils if a.categorie == "Professionnel" %}
+<div class="card mb-2">
+  <div class="card-body">
+    <strong>{{ a.marque }} {{ a.modele }}</strong><br>
+    Date : {{ a.date_sortie }}<br>
+    Score : {{ a.score }}/5
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
