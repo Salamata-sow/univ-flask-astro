@@ -109,7 +109,7 @@ with app.app_context():
         db.session.add_all([
             Photo(
                 titre="Nébuleuse",
-                image_url="https://via.placeholder.com/400x250",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/f/f3/Orion_Nebula_-_Hubble_2006_mosaic_18000.jpg",
                 categorie="Nebuleuse",
                 auteur="NASA",
                 date_photo="2023-05-12"
